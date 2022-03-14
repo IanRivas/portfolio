@@ -7,12 +7,10 @@ const Li = styled.li`
   margin-bottom: 35px;
   height: 4px;
   cursor: pointer;
-  &:hover {
-    transform: scaleX(1.3);
-  }
 `
 
-export default function FpNav({ s1ref, s2ref, s3ref, s4ref }) {
+export default function FpNav({ s1ref, s2ref, s3ref, s4ref, w }) {
+  console.log(w)
   return (
     <Box
       position="fixed"
@@ -22,22 +20,34 @@ export default function FpNav({ s1ref, s2ref, s3ref, s4ref }) {
     >
       <Flex align="center" h="100vh" ml={{ base: 5, sm: 50 }}>
         <ul>
-          <Li onClick={() => s1ref.current.scrollIntoView()}>
+          <Li
+            onClick={() => s1ref.current.scrollIntoView()}
+            className={w === 'one' ? 'leftnav' : ''}
+          >
             <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
               <Box d="none">a</Box>
             </Box>
           </Li>
-          <Li onClick={() => s2ref.current.scrollIntoView()}>
+          <Li
+            onClick={() => s2ref.current.scrollIntoView()}
+            className={w === 'two' ? 'leftnav' : ''}
+          >
             <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
               <span style={{ display: 'none' }}>a</span>
             </Box>
           </Li>
-          <Li onClick={() => s3ref.current.scrollIntoView()}>
+          <Li
+            onClick={() => s3ref.current.scrollIntoView()}
+            className={w === 'three' ? 'leftnav' : ''}
+          >
             <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
               <span style={{ display: 'none' }}>a</span>
             </Box>
           </Li>
-          <Li onClick={() => s4ref.current.scrollIntoView()}>
+          <Li
+            onClick={() => s4ref.current.scrollIntoView()}
+            className={w === 'four' ? 'leftnav' : ''}
+          >
             <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
               <span style={{ display: 'none' }}>a</span>
             </Box>

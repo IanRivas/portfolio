@@ -17,7 +17,7 @@ import {
   AiFillGithub,
   AiOutlineGithub
 } from 'react-icons/ai'
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
 
 import FpNav from '../components/FpNav'
 import '@fontsource/manrope/400.css'
@@ -33,11 +33,18 @@ const Page = props => {
   const pro1 = `/images/pro1.png`
   const pro2 = `/images/pro2.png`
   const pro3 = `/images/pro3.png`
+  const [whereiam, setWhereiam] = useState('')
 
   return (
     <>
-      <FpNav s1ref={s1ref} s2ref={s2ref} s3ref={s3ref} s4ref={s4ref} />
-      <Section>
+      <FpNav
+        s1ref={s1ref}
+        s2ref={s2ref}
+        s3ref={s3ref}
+        s4ref={s4ref}
+        w={whereiam}
+      />
+      <Section setW={setWhereiam} me="one">
         <Box w="70%" className="center">
           <Heading
             as="h2"
@@ -86,7 +93,7 @@ const Page = props => {
           <Image src={img} width={400} height={'100%'} alt="working" />
         </Box>
       </Section>
-      <Section>
+      <Section setW={setWhereiam} me="two">
         <Box
           w={{
             base: '100%',
@@ -140,7 +147,7 @@ const Page = props => {
           />
         </Box>
       </Section>
-      <Section>
+      <Section setW={setWhereiam} me="three">
         <Box
           w={{
             base: '100%',
@@ -194,7 +201,7 @@ const Page = props => {
           />
         </Box>
       </Section>
-      <Section>
+      <Section setW={setWhereiam} me="four">
         <Box
           w={{
             base: '100%',

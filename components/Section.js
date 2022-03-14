@@ -13,7 +13,7 @@ const Sec = styled.section`
   margin: 0 auto;
 `
 
-export default function Section({ children }) {
+export default function Section({ children, setW, me }) {
   const { ref, inView } = useInView({
     threshold: 0.2
   })
@@ -29,11 +29,12 @@ export default function Section({ children }) {
           bounce: 0.3
         }
       })
+      setW(me)
     }
     if (!inView) {
       animation.start({ x: '-100vw', duration: 0.1, bounce: 0 })
     }
-  }, [inView, animation])
+  }, [inView, animation, setW, me])
 
   return (
     <Sec>
