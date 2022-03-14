@@ -13,23 +13,24 @@ const LogoBox = styled.span`
   padding: 10px;
 
   &:hover img {
-    transform: rotate(20deg);
+    transform: rotate(-20deg);
   }
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
+  const palmImg = `/images/logo.png`
 
   return (
     <Link href="/">
       <a>
         <LogoBox>
-          <Image src={footPrintImg} width={20} height={20} alt="logo" />
+          <Image src={palmImg} width={30} height={30} alt="logo" />
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
             fontFamily="M PLUS Rounded 1c"
             fontWeight="bold"
-            ml={3}
+            letterSpacing={0.5}
+            ml={1}
           >
             Ian Rivas
           </Text>
