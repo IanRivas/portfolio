@@ -1,17 +1,6 @@
 import { useInView } from 'react-intersection-observer'
 import { motion, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
-import styled from '@emotion/styled'
-
-const Sec = styled.section`
-  height: 100vh;
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  scroll-snap-align: start;
-  margin: 0 auto;
-`
 
 export default function Section({ children, setW, me }) {
   const { ref, inView } = useInView({
@@ -37,20 +26,10 @@ export default function Section({ children, setW, me }) {
   }, [inView, animation, setW, me])
 
   return (
-    <Sec>
+    <div className="section-container">
       <motion.div ref={ref}>
-        <motion.div
-          animate={animation}
-          style={{
-            display: 'flex',
-            'flex-wrap': 'wrap',
-            'justify-content': 'center',
-            'align-items': 'center'
-          }}
-        >
-          {children}
-        </motion.div>
+        <motion.div animate={animation}>{children}</motion.div>
       </motion.div>
-    </Sec>
+    </div>
   )
 }

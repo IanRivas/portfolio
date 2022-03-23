@@ -10,14 +10,8 @@ const Li = styled.li`
 `
 
 export default function FpNav({ s1ref, s2ref, s3ref, s4ref, w }) {
-  console.log(w)
   return (
-    <Box
-      position="fixed"
-      css={{ backdropFilter: 'blur(40px)' }}
-      zIndex={1}
-      h="100vh"
-    >
+    <Box position="fixed" zIndex={1} h="100vh" className="left-nav">
       <Flex align="center" h="100vh" ml={{ base: 5, sm: 50 }}>
         <ul>
           <Li

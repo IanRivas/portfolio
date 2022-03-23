@@ -1,22 +1,26 @@
 {
   "home": {
     "s1": {
-      "title": "Hello, I am a Full-Stack developer javascript and here in this page you can see some of my projects",
+      "title": "Hello, I am a Full-Stack developer javascript and here in this page you can see some of my projects.",
       "name": "Ian Rivas"
     },
     "s2": {
       "project_title": "Evangelion Wiki",
-      "project_text": "A landing page with information about Evangelion characters,anime season and movies. I make this project to practice react-router-dom , React-Boostrap, Sass and deploy pages in Netlify",
+      "project_text": "A landing page with information about Evangelion characters,anime season and movies. I make this project to practice react-router-dom , React-Boostrap, Sass and deploy pages in Netlify.",
       "btn_page": "Visit Site",
       "btn_code": "Code"
     },
     "s3": {
       "project_title": "Basement Ecommerce",
-      "project_text": "This was a challenge of a company called Basement. Small e-commerce to practice all the options of add, delete and update a Cart .I like the design a lot and with this i practice NextJS, TypeScript, Tailwind, LocalStorage and deploy pages in Vercel"
+      "project_text": "This was a challenge of a company called Basement. Small e-commerce to practice all the options of add, delete and update a Cart .I like the design a lot and with this i practice NextJS, TypeScript, Tailwind, LocalStorage and deploy pages in Vercel.",
+      "btn_page": "Visit Site",
+      "btn_code": "Code"
     },
     "s4": {
       "project_title": "America Countries",
-      "project_text": "This was a popular api so i want to replicate it. I made the api with Nodejs, Express and TypeScript. The frontend app i made it with React, again TypeScript, react-query, styled-components (the app is responsive without mediaqueries). The api and the app was in a monorepo of npm and deployed in Heroku"
+      "project_text": "This was a popular api so i want to replicate it. I made the api with Nodejs, Express and TypeScript. The frontend app i made it with React, again TypeScript, react-query, styled-components (the app is responsive without mediaqueries). The api and the app was in a monorepo of npm and deployed in Heroku.",
+      "btn_page": "Visit Site",
+      "btn_code": "Code"
     }
   }
 }
