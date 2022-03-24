@@ -18,7 +18,7 @@ import {
 } from '@chakra-ui/react'
 import { ArrowLeftIcon } from '@chakra-ui/icons'
 import { AiFillPhone, AiOutlinePhone } from 'react-icons/ai'
-import { MdMail, MdOutlineEmail, MdTranslate } from 'react-icons/md'
+import { MdMail, MdOutlineEmail } from 'react-icons/md'
 import { motion } from 'framer-motion'
 
 export default function Mailer({ contact }) {
