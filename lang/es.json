@@ -1,12 +1,13 @@
 {
   "home": {
     "s1": {
-      "title": "Hola, Soy un Full-Stack developer javascript y aqui vas a poder ver algunos de mis proyectos.",
-      "name": "Ian Rivas"
+      "title": "Hola, Soy un Full-Stack Javascript developer, aquí vas a poder ver las tecnologías con las que trabajé y los proyectos que fui realizando en el transcurso de mi carrera profesional.",
+      "name": "Ian Rivas",
+      "contact": "Contactame"
     },
     "s2": {
-      "project_title": "Evangelion Wiki",
-      "project_text": "Una página con información acerca de personajes de Evangelion, temporada de anime season y peliculas. Yo hice este proyecto para practicar react-router-dom , React-Boostrap, Sass y lo deploye en Netlify.",
+      "project_title": "America Countries",
+      "project_text": "Esta fue un api bastante popular así que intente replicarla. Yo hice el api con Nodejs, Express y TypeScript. La aplicación frontend la hice con React, de nuevo TypeScript, react-query, styled-components (la aplicación es responsive sin usar mediaqueries). El api y la app estaban adentro de un monorepo de npm y fue deployado en Heroku.",
       "btn_page": "Visitar Página",
       "btn_code": "Código"
     },
@@ -17,10 +18,22 @@
       "btn_code": "Código"
     },
     "s4": {
-      "project_title": "America Countries",
-      "project_text": "Esta fue un api bastante popular así que intente replicarla. Yo hice el api con Nodejs, Express y TypeScript. La aplicación frontend la hice con React, de nuevo TypeScript, react-query, styled-components (la aplicación es responsive sin usar mediaqueries). El api y la app estaban adentro de un monorepo de npm y fue deployado en Heroku.",
+      "project_title": "Evangelion Wiki",
+      "project_text": "Una página con información acerca de personajes de Evangelion, temporada de anime season y peliculas. Yo hice este proyecto para practicar react-router-dom , React-Boostrap, Sass y lo deploye en Netlify.",
       "btn_page": "Visitar Página",
       "btn_code": "Código"
+    }
+  },
+  "form": {
+    "contact": {
+      "form_title": "Envía un mensaje con detalles de cómo puedo ayudarte",
+      "name": "Nombre",
+      "message": "Mensaje",
+      "submitButton": "Enviar Mensaje",
+      "r_title": "Si tienes un nuevo proyecto en mente, no dudes en contactarme.",
+      "r_uppertitle": "Contacto",
+      "success": "Muchas gracias por tu mensaje!!",
+      "error": "Hubo un error al procesar tu mensaje"
     }
   }
 }

@@ -12,7 +12,7 @@ export default function LenguageSelector() {
   return (
     <Select onChange={changeLang} mr={5} cursor="pointer" minW="78px">
       <option value="en">English</option>
-      <option value="es">Español</option>
+      <option value="es">Español </option>
     </Select>
   )
 }

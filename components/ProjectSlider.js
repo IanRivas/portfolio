@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import {
   Box,
@@ -11,6 +11,7 @@ import {
   useColorModeValue,
   Flex
 } from '@chakra-ui/react'
+import { motion, useAnimation } from 'framer-motion'
 import { AiFillGithub, AiOutlineGithub } from 'react-icons/ai'
 
 export default function ProjectSlider({
@@ -18,8 +19,37 @@ export default function ProjectSlider({
   data,
   imgUrl,
   siteUrl,
-  codeUrl
+  codeUrl,
+  inview
 }) {
+  const animateButtons = useAnimation()
+  const animateText = useAnimation()
+  useEffect(() => {
+    if (inview) {
+      animateText.start({
+        opacity: 1,
+        transition: {
+          type: 'string',
+          delay: 0.8,
+          duration: 0.4
+        }
+      })
+      animateButtons.start({
+        y: 0,
+        transition: {
+          type: 'string',
+          delay: 1.2,
+          duration: 0.5,
+          bounce: 0.3
+        }
+      })
+    }
+    if (!inview) {
+      animateText.start({ opacity: 0 })
+      animateButtons.start({ y: 100, duration: 0.1, bounce: 0 })
+    }
+  }, [inview, animateButtons, animateText])
+
   return (
     <Flex
       flexWrap={'wrap'}
@@ -38,41 +68,44 @@ export default function ProjectSlider({
           lg: '60%'
         }}
       >
-        <Box className="center">
+        <Box className="center" overflow={'hidden'}>
           <Heading ref={sref} mb="25px" className="project-title">
             {data.project_title}
           </Heading>
-          <Text w="70%">{data.project_text}</Text>
-          <HStack my="20px" spacing="24px">
-            <Link href={siteUrl}>
-              <a>
-                <Button colorScheme={useColorModeValue('purple', 'orange')}>
-                  <Text
-                    color={useColorModeValue('light', 'dark')}
-                    fontFamily="M PLUS Rounded 1c"
-                    fontWeight="bold"
-                    letterSpacing={0.5}
-                  >
-                    {data.btn_page}
-                  </Text>
-                </Button>
-              </a>
-            </Link>
-            <Link href={codeUrl}>
-              <a>
-                <Button colorScheme={useColorModeValue('purple', 'orange')}>
-                  <IconButton
-                    colorScheme={useColorModeValue('purple', 'orange')}
-                    icon={useColorModeValue(
-                      <AiFillGithub size={40} />,
-                      <AiOutlineGithub size={40} />
-                    )}
-                  />
-                  <Text ml="5px">{data.btn_code}</Text>
-                </Button>
-              </a>
-            </Link>
-          </HStack>
+          <motion.div animate={animateText} className="center">
+            <Text w="70%">{data.project_text}</Text>
+          </motion.div>
+          <motion.div animate={animateButtons}>
+            <HStack my="20px" spacing="15px">
+              <Link href={siteUrl}>
+                <a>
+                  <Button colorScheme={useColorModeValue('purple', 'orange')}>
+                    <Text
+                      color={useColorModeValue('light', 'dark')}
+                      fontWeight="bold"
+                      letterSpacing={0.5}
+                    >
+                      {data.btn_page}
+                    </Text>
+                  </Button>
+                </a>
+              </Link>
+              <Link href={codeUrl}>
+                <a>
+                  <Button colorScheme={useColorModeValue('purple', 'orange')}>
+                    <Text mr="5px">{data.btn_code}</Text>
+                    <IconButton
+                      colorScheme={useColorModeValue('purple', 'orange')}
+                      icon={useColorModeValue(
+                        <AiFillGithub size={40} />,
+                        <AiOutlineGithub size={40} />
+                      )}
+                    />
+                  </Button>
+                </a>
+              </Link>
+            </HStack>
+          </motion.div>
         </Box>
       </Box>
       <Box w={{ base: '50%', sm: '50%', lg: '30%' }}>
@@ -81,6 +114,7 @@ export default function ProjectSlider({
           width={400}
           height={{ base: 150, sm: 350 }}
           alt="project screen"
+          _hover={{ transform: 'scale(1.05)' }}
         />
       </Box>
     </Flex>

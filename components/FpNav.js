@@ -18,7 +18,11 @@ export default function FpNav({ s1ref, s2ref, s3ref, s4ref, w }) {
             onClick={() => s1ref.current.scrollIntoView()}
             className={w === 'one' ? 'leftnav' : ''}
           >
-            <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
+            <Box
+              bg={useColorModeValue('black', 'white')}
+              h={'100%'}
+              _hover={{ transform: 'scaleX(1.2)' }}
+            >
               <Box d="none">a</Box>
             </Box>
           </Li>
@@ -26,7 +30,11 @@ export default function FpNav({ s1ref, s2ref, s3ref, s4ref, w }) {
             onClick={() => s2ref.current.scrollIntoView()}
             className={w === 'two' ? 'leftnav' : ''}
           >
-            <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
+            <Box
+              bg={useColorModeValue('black', 'white')}
+              h={'100%'}
+              _hover={{ transform: 'scaleX(1.2)' }}
+            >
               <span style={{ display: 'none' }}>a</span>
             </Box>
           </Li>
@@ -34,7 +42,11 @@ export default function FpNav({ s1ref, s2ref, s3ref, s4ref, w }) {
             onClick={() => s3ref.current.scrollIntoView()}
             className={w === 'three' ? 'leftnav' : ''}
           >
-            <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
+            <Box
+              bg={useColorModeValue('black', 'white')}
+              h={'100%'}
+              _hover={{ transform: 'scaleX(1.2)' }}
+            >
               <span style={{ display: 'none' }}>a</span>
             </Box>
           </Li>
@@ -42,7 +54,11 @@ export default function FpNav({ s1ref, s2ref, s3ref, s4ref, w }) {
             onClick={() => s4ref.current.scrollIntoView()}
             className={w === 'four' ? 'leftnav' : ''}
           >
-            <Box bg={useColorModeValue('black', 'white')} h={'100%'}>
+            <Box
+              bg={useColorModeValue('black', 'white')}
+              h={'100%'}
+              _hover={{ transform: 'scaleX(1.1)' }}
+            >
               <span style={{ display: 'none' }}>a</span>
             </Box>
           </Li>

@@ -1,12 +1,13 @@
 {
   "home": {
     "s1": {
-      "title": "Hello, I am a Full-Stack developer javascript and here in this page you can see some of my projects.",
-      "name": "Ian Rivas"
+      "title": "Hello, I am a Full-Stack Javascript developer, in this page you can see the technologies with which I worked and the projects that I have been carrying out in the course of my professional career.",
+      "name": "Ian Rivas",
+      "contact": "Contact Me"
     },
     "s2": {
-      "project_title": "Evangelion Wiki",
-      "project_text": "A landing page with information about Evangelion characters,anime season and movies. I make this project to practice react-router-dom , React-Boostrap, Sass and deploy pages in Netlify.",
+      "project_title": "America Countries",
+      "project_text": "This was a popular api so i want to replicate it. I made the api with Nodejs, Express and TypeScript. The frontend app i made it with React, again TypeScript, react-query, styled-components (the app is responsive without mediaqueries). The api and the app was in a monorepo of npm and deployed in Heroku.",
       "btn_page": "Visit Site",
       "btn_code": "Code"
     },
@@ -17,10 +18,22 @@
       "btn_code": "Code"
     },
     "s4": {
-      "project_title": "America Countries",
-      "project_text": "This was a popular api so i want to replicate it. I made the api with Nodejs, Express and TypeScript. The frontend app i made it with React, again TypeScript, react-query, styled-components (the app is responsive without mediaqueries). The api and the app was in a monorepo of npm and deployed in Heroku.",
+      "project_title": "Evangelion Wiki",
+      "project_text": "A landing page with information about Evangelion characters,anime season and movies. I make this project to practice react-router-dom , React-Boostrap, Sass and deploy pages in Netlify.",
       "btn_page": "Visit Site",
       "btn_code": "Code"
+    }
+  },
+  "form": {
+    "contact": {
+      "form_title": "Send a message with the details of what do you need",
+      "name": "Name",
+      "message": "Message",
+      "submitButton": "Send Message",
+      "r_title": "if you have a new project in mind, don't doubt in contact to me",
+      "r_uppertitle": "Contact",
+      "success": "Thank you for you message!!",
+      "error": "Error processing your message"
     }
   }
 }

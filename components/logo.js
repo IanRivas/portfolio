@@ -13,7 +13,7 @@ const LogoBox = styled.span`
   padding: 10px;
 
   &:hover img {
-    transform: rotate(-20deg);
+    transform: rotate(-10deg) scale(1.1);
   }
 `
 
@@ -27,10 +27,11 @@ const Logo = () => {
           <Image src={palmImg} width={30} height={30} alt="logo" />
           <Text
             color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily="M PLUS Rounded 1c"
+            fontFamily="Noto Sans"
             fontWeight="bold"
             letterSpacing={0.5}
             ml={1}
+            _hover={{ textDecoration: 'underline' }}
           >
             Ian Rivas
           </Text>
